@@ -140,7 +140,7 @@ class SwipeActionsView: UIView {
     
     func addButtons(for actions: [SwipeAction], withMaximum size: CGSize, contentEdgeInsets: UIEdgeInsets) -> [SwipeActionButton] {
         let buttons: [SwipeActionButton] = actions.map({ action in
-            let actionButton = SwipeActionButton(action: action)
+            let actionButton = options.buttonType.init(action: action)
             actionButton.addTarget(self, action: #selector(actionTapped(button:)), for: .touchUpInside)
             actionButton.autoresizingMask = [.flexibleHeight, orientation == .right ? .flexibleRightMargin : .flexibleLeftMargin]
             actionButton.spacing = options.buttonSpacing ?? 8

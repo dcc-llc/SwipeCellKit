@@ -12,6 +12,8 @@ public typealias SwipeTableOptions = SwipeOptions
 
 /// The `SwipeOptions` class provides options for transistion and expansion behavior for swiped cell.
 public struct SwipeOptions {
+    public var buttonType: SwipeActionButton.Type = SwipeActionButton.self
+
     /// The transition style. Transition is the style of how the action buttons are exposed during the swipe.
     public var transitionStyle: SwipeTransitionStyle = .border
     
