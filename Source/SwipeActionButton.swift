@@ -14,7 +14,7 @@ open class SwipeActionButton: UIButton {
 
     public var maximumImageHeight: CGFloat = 0
     public var verticalAlignment: SwipeVerticalAlignment = .centerFirstBaseline
-    public var alignment: SwipeActionContentAlignment {
+    open var alignment: SwipeActionContentAlignment {
         return .vertical
     }
 
